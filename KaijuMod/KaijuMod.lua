@@ -1,10 +1,10 @@
 --- MOD_NAME: KaijuMod
---- MOD_ID: KaijuMod_EliteIN
+--- MOD_ID: KaijuMod
 --- MOD_AUTHOR: EliteIN
 --- MOD_DESCRIPTION: A retarded mod that adds jokers to the game.
 --- MOD_VERSION: 1.0.0
 
-local mod_name = 'KaijuMod_EliteIN'
+local mod_name = 'KaijuMod'
 
 local jokers = {
     chicken = {
