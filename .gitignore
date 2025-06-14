@@ -1,7 +1,7 @@
 SampleJimbos
-1x/*
-!1x/.gitkeep
-2x/*
-!2x/.gitkeep
-original/*
-!original/.gitkeep
+pixelator/1x/*
+!pixelator/1x/.gitkeep
+pixelator/2x/*
+!pixelator/2x/.gitkeep
+pixelator/original/*
+!pixelator/original/.gitkeep
