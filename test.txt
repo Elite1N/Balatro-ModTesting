@@ -1,3 +1,3 @@
 Use the Pixelator thing: python Pixelator.py <input_folder> <output_folder>
 
-python Pixelator.py original 1x
+python Pixelator.py original 1x 2x
