@@ -1,5 +1,0 @@
-Use the Pixelator thing: python Pixelator.py <input_folder> <output_folder> <output_folder2>
-cd to pixelator folder
-python Pixelator.py original 1x 2x
-
-Get-ChildItem 1x,2x -File | Where-Object { $_.Name -ne '.gitkeep' } | Remove-Item
