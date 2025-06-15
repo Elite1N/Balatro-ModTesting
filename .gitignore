@@ -1,4 +1,5 @@
 SampleJimbos
+ExampleJokersMod
 test.txt
 pixelator/1x/*
 !pixelator/1x/.gitkeep
@@ -6,5 +7,5 @@ pixelator/2x/*
 !pixelator/2x/.gitkeep
 pixelator/original/*
 !pixelator/original/.gitkeep
-test.txt
-ExampleJokersMod
+
+
