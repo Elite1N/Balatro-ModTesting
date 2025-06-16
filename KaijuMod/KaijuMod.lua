@@ -25,6 +25,17 @@ SMODS.Atlas {
 	py = 95
 }
 
+SMODS.Atlas {
+	-- Key for code to find it with
+	key = "Kaiju",
+	-- The name of the file, for the code to pull the atlas from
+	path = "Kaiju.png",
+	-- Width of each sprite in 1x size
+	px = 71,
+	-- Height of each sprite in 1x size
+	py = 95
+}
+
 SMODS.Joker {
 	-- How the code refers to the joker.
 	key = 'rainmaker',
@@ -62,9 +73,9 @@ SMODS.Joker {
 	-- Sets rarity. 1 common, 2 uncommon, 3 rare, 4 legendary.
 	rarity = 3,
 	-- Which atlas key to pull from.
-	atlas = 'ModdedVanilla',
+	atlas = 'Kaiju',
 	-- This card's position on the atlas, starting at {x=0,y=0} for the very top left.
-	pos = { x = 0, y = 0 },
+	pos = { x = 4, y = 0 },
 	-- Cost of card in shop.
 	cost = 10,
 	unlocked = true, --is joker unlocked by default.
@@ -98,8 +109,8 @@ SMODS.Joker{
 	},
 	config = { extra = {Xmult = 3}},
 	rarity = 4,
-	atlas = 'ModdedVanilla',
-	pos = { x = 1, y = 0 },
+	atlas = 'Kaiju',
+	pos = { x = 2, y = 0 },
 	cost = 20,
 	unlocked = true,
 	discovered = true,
@@ -127,8 +138,8 @@ SMODS.Joker{
 	},
 	config = { extra = {Xmult = 3}},
 	rarity = 4,
-	atlas = 'ModdedVanilla',
-	pos = { x = 2, y = 0 },
+	atlas = 'Kaiju',
+	pos = { x = 3, y = 0 },
 	cost = 20,
 	unlocked = true,
 	discovered = true,
@@ -156,8 +167,8 @@ SMODS.Joker{
 	},
 	config = { extra = {Xmult = 3}},
 	rarity = 4,
-	atlas = 'ModdedVanilla',
-	pos = { x = 3, y = 0 },
+	atlas = 'Kaiju',
+	pos = { x = 0, y = 0 },
 	cost = 20,
 	unlocked = true,
 	discovered = true,
@@ -185,8 +196,8 @@ SMODS.Joker{
 	},
 	config = { extra = {Xmult = 3}},
 	rarity = 4,
-	atlas = 'ModdedVanilla',
-	pos = { x = 4, y = 0 },
+	atlas = 'Kaiju',
+	pos = { x = 1, y = 0 },
 	cost = 20,
 	unlocked = true,
 	discovered = true,
