@@ -88,6 +88,122 @@ SMODS.Joker {
 	end
 }
 
+SMODS.Joker{
+	key = 'cyberman',
+	loc_txt = {
+		name = 'Cyberman',
+		text = {
+			"{X:mult,C:white} X#1# {} Mult"
+		}
+	},
+	config = { extra = {Xmult = 3}},
+	rarity = 4,
+	atlas = 'ModdedVanilla',
+	pos = { x = 1, y = 0 },
+	cost = 20,
+	unlocked = true,
+	discovered = true,
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.Xmult } }
+	end,
+	calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult } },
+				Xmult_mod = card.ability.extra.Xmult,
+			}
+		end
+	end
+
+}
+
+SMODS.Joker{
+	key = 'oldhermit',
+	loc_txt = {
+		name = 'Old Hermit',
+		text = {
+			"{X:mult,C:white} X#1# {} Mult"
+		}
+	},
+	config = { extra = {Xmult = 3}},
+	rarity = 4,
+	atlas = 'ModdedVanilla',
+	pos = { x = 2, y = 0 },
+	cost = 20,
+	unlocked = true,
+	discovered = true,
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.Xmult } }
+	end,
+	calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult } },
+				Xmult_mod = card.ability.extra.Xmult,
+			}
+		end
+	end
+
+}
+
+SMODS.Joker{
+	key = 'blackmass',
+	loc_txt = {
+		name = 'Black Mass',
+		text = {
+			"{X:mult,C:white} X#1# {} Mult"
+		}
+	},
+	config = { extra = {Xmult = 3}},
+	rarity = 4,
+	atlas = 'ModdedVanilla',
+	pos = { x = 3, y = 0 },
+	cost = 20,
+	unlocked = true,
+	discovered = true,
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.Xmult } }
+	end,
+	calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult } },
+				Xmult_mod = card.ability.extra.Xmult,
+			}
+		end
+	end
+
+}
+
+SMODS.Joker{
+	key = 'chicken',
+	loc_txt = {
+		name = 'Le Cockatrice',
+		text = {
+			"{X:mult,C:white} X#1# {} Mult"
+		}
+	},
+	config = { extra = {Xmult = 3}},
+	rarity = 4,
+	atlas = 'ModdedVanilla',
+	pos = { x = 4, y = 0 },
+	cost = 20,
+	unlocked = true,
+	discovered = true,
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra.Xmult } }
+	end,
+	calculate = function(self, card, context)
+		if context.joker_main then
+			return {
+				message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult } },
+				Xmult_mod = card.ability.extra.Xmult,
+			}
+		end
+	end
+
+}
+
 
 ----------------------------------------------
 ------------MOD CODE END----------------------
