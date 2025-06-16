@@ -42,8 +42,8 @@ SMODS.Joker {
 				You can find the vanilla joker descriptions and names as well as several other things in the localization files.
 				]]
 			--"{C:mult}+#1# {} Mult"
-			"At the {C:attention}start of each turn{},",
-			"gains an {C:attention}'Egg'{}",
+			"{C:mult}+#1#{} Mult for each {C:money}$1{} you have",
+			"{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
 		}
 	},
 	--[[
@@ -52,15 +52,15 @@ SMODS.Joker {
 		If you want to change the static value, you'd only change this number, instead
 		of going through all your code to change each instance individually.
 		]]
-	config = {},
+	config = {extra = 2},
 	-- loc_vars gives your loc_text variables to work with, in the format of #n#, n being the variable in order.
 	-- #1# is the first variable in vars, #2# the second, #3# the third, and so on.
 	-- It's also where you'd add to the info_queue, which is where things like the negative tooltip are.
-	--[[loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.mult } }
-	end,]]
+	loc_vars = function(self, info_queue, card)
+		return { vars = { card.ability.extra, card.ability.extra*math.max(0,G.GAME.dollars) or 0 } }
+	end,
 	-- Sets rarity. 1 common, 2 uncommon, 3 rare, 4 legendary.
-	rarity = 1,
+	rarity = 3,
 	-- Which atlas key to pull from.
 	atlas = 'ModdedVanilla',
 	-- This card's position on the atlas, starting at {x=0,y=0} for the very top left.
@@ -74,12 +74,15 @@ SMODS.Joker {
 		if context.joker_main then
 			-- Tells the joker what to do. In this case, it pulls the value of mult from the config, and tells the joker to use that variable as the "mult_mod".
 			return {
-				mult_mod = card.ability.extra.mult,
+				
 				-- This is a localize function. Localize looks through the localization files, and translates it. It ensures your mod is able to be translated. I've left it out in most cases for clarity reasons, but this one is required, because it has a variable.
 				-- This specifically looks in the localization table for the 'variable' category, specifically under 'v_dictionary' in 'localization/en-us.lua', and searches that table for 'a_mult', which is short for add mult.
 				-- In the localization file, a_mult = "+#1#". Like with loc_vars, the vars in this message variable replace the #1#.
-				message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
+				message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra*math.max(0,G.GAME.dollars) } },
 				-- Without this, the mult will stil be added, but it'll just show as a blank red square that doesn't have any text.
+				
+				mult_mod = (card.ability.extra*math.max(0,G.GAME.dollars)), --make the +mult activates ingame. -> for others see chip_mod, Xmult_mod all should be in the return section.
+				colour = G.C.MULT --IDK what this does.
 			}
 		end
 	end
